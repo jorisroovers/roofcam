@@ -9,6 +9,18 @@ serve the snapshot and its classification in a simple html page that can be incl
 Might also build a simple web UI to manually classify snapshots as to get an idea of the automated water classifier
 accuracy.
 
+
+## Getting started
+
+Roofcam requires [Pillow](http://pillow.readthedocs.io/en/4.0.x/index.html). Since Pillow has binary dependencies, it's
+easiest to install it as a system package:
+
+On Ubuntu:
+```
+sudo apt-get install python-imaging
+```
+
+Then:
 ```
 pip install -r requirements.txt
 

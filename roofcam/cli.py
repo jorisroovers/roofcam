@@ -24,8 +24,9 @@ def cli(port, host, web, file, dir):
         if file:
             FILE = file
         elif dir:
-            FILE = "DIR"
-
+            files = os.listdir(dir)
+            files.sort()
+            FILE = os.path.join(dir, files[-1])
         app.run(host=host, port=port)
     else:
         # We're not running a webserver, so just do the classification for the passed file or all files in the
@@ -39,7 +40,8 @@ def cli(port, host, web, file, dir):
 
         if files:
             for file in files:
-                classify_wet_or_dry(file)
+                result = classify_wet_or_dry(file)
+                print file, "=>", result
 
 
 @app.route('/snapshot/<snapshot>')
@@ -49,7 +51,8 @@ def snapshot(snapshot):
 
 @app.route("/")
 def index():
-    return render_template("index.html", snapshot=os.path.basename(FILE))
+    result = classify_wet_or_dry(FILE)
+    return render_template("index.html", snapshot=os.path.basename(FILE), result=result)
 
 
 if __name__ == "__main__":
