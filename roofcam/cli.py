@@ -5,8 +5,8 @@ import click
 
 app = Flask(__name__)
 
-# Store the target file in a global file, not ideal but being pragmatic here :)
-FILE = None
+# Store the target PATH in a global var, not ideal but being pragmatic here :)
+PATH = None
 
 
 @click.command()
@@ -20,13 +20,11 @@ FILE = None
 def cli(port, host, web, file, dir):
     #
     if web:
-        global FILE
+        global PATH
         if file:
-            FILE = file
+            PATH = file
         elif dir:
-            files = os.listdir(dir)
-            files.sort()
-            FILE = os.path.join(dir, files[-1])
+            PATH = dir
         app.run(host=host, port=port)
     else:
         # We're not running a webserver, so just do the classification for the passed file or all files in the
@@ -46,13 +44,22 @@ def cli(port, host, web, file, dir):
 
 @app.route('/snapshot/<snapshot>')
 def snapshot(snapshot):
-    return send_from_directory(os.path.dirname(FILE), snapshot)
+    dirname = PATH
+    if not os.path.isdir(PATH):
+        dirname = os.path.dirname(PATH)
+    return send_from_directory(dirname, snapshot)
 
 
 @app.route("/")
 def index():
-    result = classify_wet_or_dry(FILE)
-    return render_template("index.html", snapshot=os.path.basename(FILE), result=result)
+    file = PATH
+    if os.path.isdir(PATH):
+        files = os.listdir(PATH)
+        files.sort()
+        file = os.path.join(PATH, files[-1])
+
+    result = classify_wet_or_dry(file)
+    return render_template("index.html", snapshot=os.path.basename(file), result=result)
 
 
 if __name__ == "__main__":
