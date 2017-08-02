@@ -1,10 +1,72 @@
 <html>
 
-
 <body>
-<p>class = {{result}}</p>
-<img src="snapshot/{{snapshot}}" style="width:100%; max-width:640px"/>
+<p>Predicted class = <span id="predictedClass">{{ prediction }}</span></p>
+<p>Target class = <span id="targetClass">{{ target }}</span></p>
+<img id="snapshot" src="snapshot/{{ snapshot }}" style="width:100%; max-width:640px"/>
 
+<div>
+    <a id="prevImg" href="#">PREV</a>
+    <a id="nextImg" href="/next/{{ snapshot }}">NEXT</a>
+</div>
+
+<script>
+    const $ = document.querySelector.bind(document);
+    const snapshotEl = $("#snapshot");
+    const prevImg = $("#prevImg");
+    const nextImg = $("#nextImg");
+
+    document.onkeydown = function (evt) {
+        evt = evt || window.event;
+        if (evt.keyCode == 37) {
+            prevNextHandler("prev")();
+        } else if (evt.keyCode == 39) {
+            prevNextHandler("next")();
+        } else if (evt.keyCode == 87) {
+            classifyCurrentSnapshot("WET");
+        } else if (evt.keyCode == 68) {
+            classifyCurrentSnapshot("DRY");
+        } else if (evt.keyCode == 78) {
+            classifyCurrentSnapshot("NIGHT");
+        }
+        {#        console.log("keydown: " + evt.keyCode);#}
+    };
+
+    function classifyCurrentSnapshot(clazz) {
+        const snapshot = snapshotEl.src.split("/").pop();
+        console.log(snapshot, "=>", clazz);
+        var oReq = new XMLHttpRequest();
+        oReq.addEventListener("load", function () {
+            var data = JSON.parse(this.responseText);
+            $("#predictedClass").innerHTML = data.prediction;
+            $("#targetClass").innerHTML = data.target;
+        });
+        oReq.open("POST", "/classify/" + snapshot, true);
+        oReq.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        oReq.send("class=" + clazz);
+
+    };
+
+    function prevNextHandler(direction) {
+        return function () {
+            const snapshot = snapshotEl.src.split("/").pop();
+            var oReq = new XMLHttpRequest();
+            oReq.addEventListener("load", function () {
+                var data = JSON.parse(this.responseText);
+                snapshotEl.src = snapshotEl.src.replace(snapshot, data.snapshot);
+                $("#predictedClass").innerHTML = data.prediction;
+                $("#targetClass").innerHTML = data.target;
+
+            });
+            oReq.open("GET", "/" + direction + "/" + snapshot);
+            oReq.send();
+            return false;
+        }
+    };
+
+    prevImg.onclick = prevNextHandler("prev");
+    nextImg.onclick = prevNextHandler("next");
+</script>
 </body>
 
 </html>

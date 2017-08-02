@@ -24,14 +24,15 @@ sudo apt-get install python-imaging
 
 Then:
 ```
-pip install -r requirements.txt
+# setup.py develop needed to use Flask debug mode:
+python setup.py develop
 
 # Classify a single snapshot
-python -m roofcam.cli --file samples/`ls *samples* | sort | tail -1`
+roofcam --file samples/`ls *snapshots* | sort | tail -1`
 
 # Classify a directory of snapshots
-python -m roofcam.cli --dir samples
+roofcam --dir samples
 
 # host a webserver with the latest snapshot
-python -m roofcam.cli --dir samples --web --port 1234 --host localhost
+roofcam --dir samples --web --port 1234 --host localhost
 ```
