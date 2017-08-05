@@ -1,4 +1,4 @@
-import os, fnmatch, json
+import os, fnmatch, json, traceback
 from roofcam import classifier
 from flask import Flask, render_template, send_from_directory, request, jsonify
 import click
@@ -57,6 +57,18 @@ def get_target(snapshot):
     return data.get(snapshot, {}).get('class', "UNKNOWN")
 
 
+def snapshot_data(snapshot, target=None):
+    try:
+        prediction = classifier.classify_wet_or_dry(os.path.join(app.config['PATH'], snapshot))
+    except Exception as e:
+        prediction = "ERROR ({0})".format(str(e))
+        traceback.print_exc()  # let's print traceback for debugging
+
+    if target is None:
+        target = get_target(snapshot)
+    return jsonify({'snapshot': snapshot, 'prediction': prediction, 'target': target})
+
+
 @app.route('/snapshot/<snapshot>')
 def snapshot(snapshot):
     dirname = app.config['PATH']
@@ -70,9 +82,7 @@ def prev_snapshot(snapshot):
     files = image_list()
     prev_index = max(files.index(snapshot) - 1, 0)
     file = files[prev_index]
-    prediction = classifier.classify_wet_or_dry(os.path.join(app.config['PATH'], file))
-    target = get_target(file)
-    return jsonify({'snapshot': file, 'prediction': prediction, 'target': target})
+    return snapshot_data(file)
 
 
 @app.route('/next/<snapshot>')
@@ -80,9 +90,7 @@ def next_snapshot(snapshot):
     files = image_list()
     next_index = min(files.index(snapshot) + 1, max(len(files) - 1, 0))
     file = files[next_index]
-    prediction = classifier.classify_wet_or_dry(os.path.join(app.config['PATH'], file))
-    target = get_target(file)
-    return jsonify({'snapshot': file, 'prediction': prediction, 'target': target})
+    return snapshot_data(file)
 
 
 @app.route('/classify/<snapshot>', methods=['POST'])
@@ -97,9 +105,7 @@ def classify(snapshot):
     with open(app.config['TARGET_CLASS_STORE'], 'w') as outfile:
         json.dump(data, outfile, indent=4)
 
-    prediction = classifier.classify_wet_or_dry(os.path.join(app.config['PATH'], snapshot))
-
-    return jsonify({'snapshot': snapshot, 'prediction': prediction, 'target': request.form['class']})
+    return snapshot_data(snapshot, target=request.form['class'])
 
 
 @app.route("/")

@@ -1,18 +1,39 @@
 {
+    "snapshot-2017-08-05_00-20-01.jpg": {
+        "class": "NIGHT"
+    }, 
+    "snapshot-2017-08-05_14-20-01.jpg": {
+        "class": "WET"
+    }, 
     "snapshot-2017-08-02_14-10-01.jpg": {
         "class": "DRY"
     }, 
     "snapshot-2017-08-02_18-00-01.jpg": {
         "class": "WET"
     }, 
+    "snapshot-2017-08-05_02-40-01.jpg": {
+        "class": "NIGHT"
+    }, 
     "snapshot-2017-08-02_15-30-01.jpg": {
         "class": "DRY"
+    }, 
+    "snapshot-2017-08-04_10-20-01.jpg": {
+        "class": "WET"
     }, 
     "snapshot-2017-08-02_00-30-01.jpg": {
         "class": "NIGHT"
     }, 
+    "snapshot-2017-08-05_06-20-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-04_17-30-01.jpg": {
+        "class": "WET"
+    }, 
     "snapshot-2017-08-01_22-30-01.jpg": {
         "class": "NIGHT"
+    }, 
+    "snapshot-2017-08-05_11-50-01.jpg": {
+        "class": "WET"
     }, 
     "snapshot-2017-08-01_22-50-01.jpg": {
         "class": "NIGHT"
@@ -23,20 +44,56 @@
     "snapshot-2017-08-02_18-10-01.jpg": {
         "class": "WET"
     }, 
-    "snapshot-2017-08-02_03-50-01.jpg": {
-        "class": "NIGHT"
+    "snapshot-2017-08-05_14-40-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-04_09-00-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-04_07-50-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-05_07-50-01.jpg": {
+        "class": "WET"
     }, 
     "snapshot-2017-08-02_05-00-01.jpg": {
+        "class": "NIGHT"
+    }, 
+    "snapshot-2017-08-05_01-10-01.jpg": {
         "class": "NIGHT"
     }, 
     "snapshot-2017-08-02_04-20-01.jpg": {
         "class": "NIGHT"
     }, 
+    "snapshot-2017-08-04_17-50-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-05_06-30-01.jpg": {
+        "class": "WET"
+    }, 
     "snapshot-2017-08-01_22-20-01.jpg": {
         "class": "NIGHT"
     }, 
+    "snapshot-2017-08-04_16-50-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-04_09-30-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-05_15-20-01.jpg": {
+        "class": "WET"
+    }, 
     "snapshot-2017-08-01_23-20-01.jpg": {
         "class": "NIGHT"
+    }, 
+    "snapshot-2017-08-05_03-20-01.jpg": {
+        "class": "NIGHT"
+    }, 
+    "snapshot-2017-08-05_07-30-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-05_10-10-01.jpg": {
+        "class": "WET"
     }, 
     "snapshot-2017-08-02_15-40-01.jpg": {
         "class": "DRY"
@@ -47,14 +104,50 @@
     "snapshot-2017-08-02_00-50-01.jpg": {
         "class": "NIGHT"
     }, 
+    "snapshot-2017-08-04_23-00-01.jpg": {
+        "class": "NIGHT"
+    }, 
     "snapshot-2017-08-01_18-20-01.jpg": {
         "class": "DRY"
     }, 
     "snapshot-2017-08-01_19-20-01.jpg": {
         "class": "DRY"
     }, 
+    "snapshot-2017-08-04_20-20-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-04_22-10-01.jpg": {
+        "class": "NIGHT"
+    }, 
+    "snapshot-2017-08-04_18-10-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-04_10-10-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-05_13-00-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-04_08-00-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-05_08-10-01.jpg": {
+        "class": "WET"
+    }, 
     "snapshot-2017-08-02_16-00-01.jpg": {
         "class": "DRY"
+    }, 
+    "snapshot-2017-08-04_16-20-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-05_12-10-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-04_22-00-01.jpg": {
+        "class": "NIGHT"
+    }, 
+    "snapshot-2017-08-04_22-20-01.jpg": {
+        "class": "NIGHT"
     }, 
     "snapshot-2017-08-02_17-10-01.jpg": {
         "class": "DRY"
@@ -62,17 +155,32 @@
     "snapshot-2017-08-01_17-10-01.jpg": {
         "class": "DRY"
     }, 
+    "snapshot-2017-08-05_09-10-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-05_08-50-01.jpg": {
+        "class": "WET"
+    }, 
     "snapshot-2017-08-01_17-20-01.jpg": {
         "class": "DRY"
     }, 
     "snapshot-2017-08-01_22-10-01.jpg": {
         "class": "NIGHT"
     }, 
+    "snapshot-2017-08-05_06-40-01.jpg": {
+        "class": "WET"
+    }, 
     "snapshot-2017-08-02_05-50-01.jpg": {
         "class": "DRY"
     }, 
-    "snapshot-2017-08-02_14-30-01.jpg": {
+    "snapshot-2017-08-05_02-00-01.jpg": {
+        "class": "NIGHT"
+    }, 
+    "snapshot-2017-08-02_16-50-01.jpg": {
         "class": "DRY"
+    }, 
+    "snapshot-2017-08-05_14-30-01.jpg": {
+        "class": "WET"
     }, 
     "snapshot-2017-08-01_21-50-01.jpg": {
         "class": "DRY"
@@ -80,25 +188,61 @@
     "snapshot-2017-08-02_16-40-01.jpg": {
         "class": "DRY"
     }, 
+    "snapshot-2017-08-05_01-30-01.jpg": {
+        "class": "NIGHT"
+    }, 
+    "snapshot-2017-08-04_19-10-01.jpg": {
+        "class": "WET"
+    }, 
     "snapshot-2017-08-02_13-40-01.jpg": {
         "class": "DRY"
+    }, 
+    "snapshot-2017-08-04_20-30-01.jpg": {
+        "class": "WET"
     }, 
     "snapshot-2017-08-02_13-50-01.jpg": {
         "class": "DRY"
     }, 
-    "snapshot-2017-08-02_14-40-01.jpg": {
-        "class": "DRY"
+    "snapshot-2017-08-05_11-00-01.jpg": {
+        "class": "WET"
     }, 
-    "snapshot-2017-08-02_01-10-01.jpg": {
+    "snapshot-2017-08-05_02-10-01.jpg": {
         "class": "NIGHT"
     }, 
-    "snapshot-2017-08-02_03-30-01.jpg": {
+    "snapshot-2017-08-01_23-40-01.jpg": {
         "class": "NIGHT"
+    }, 
+    "snapshot-2017-08-05_09-50-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-04_16-40-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-05_16-00-01.jpg": {
+        "class": "WET"
     }, 
     "snapshot-2017-08-01_23-50-01.jpg": {
         "class": "NIGHT"
     }, 
+    "snapshot-2017-08-05_01-20-01.jpg": {
+        "class": "NIGHT"
+    }, 
+    "snapshot-2017-08-04_08-10-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-04_19-00-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-05_16-10-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-04_17-40-01.jpg": {
+        "class": "WET"
+    }, 
     "snapshot-2017-08-02_02-10-01.jpg": {
+        "class": "NIGHT"
+    }, 
+    "snapshot-2017-08-05_01-40-01.jpg": {
         "class": "NIGHT"
     }, 
     "snapshot-2017-08-02_00-10-01.jpg": {
@@ -110,7 +254,25 @@
     "snapshot-2017-08-01_20-00-01.jpg": {
         "class": "DRY"
     }, 
+    "snapshot-2017-08-05_00-30-01.jpg": {
+        "class": "NIGHT"
+    }, 
+    "snapshot-2017-08-05_00-40-01.jpg": {
+        "class": "NIGHT"
+    }, 
+    "snapshot-2017-08-04_08-40-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-02_03-50-01.jpg": {
+        "class": "NIGHT"
+    }, 
+    "snapshot-2017-08-05_07-20-01.jpg": {
+        "class": "WET"
+    }, 
     "snapshot-2017-08-01_22-40-01.jpg": {
+        "class": "NIGHT"
+    }, 
+    "snapshot-2017-08-05_02-50-01.jpg": {
         "class": "NIGHT"
     }, 
     "snapshot-2017-08-02_16-20-01.jpg": {
@@ -122,8 +284,23 @@
     "snapshot-2017-08-02_06-40-01.jpg": {
         "class": "DRY"
     }, 
+    "snapshot-2017-08-04_23-10-01.jpg": {
+        "class": "NIGHT"
+    }, 
+    "snapshot-2017-08-04_11-40-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-02_14-30-01.jpg": {
+        "class": "DRY"
+    }, 
+    "snapshot-2017-08-05_12-30-01.jpg": {
+        "class": "WET"
+    }, 
     "snapshot-2017-08-02_17-30-01.jpg": {
         "class": "DRY"
+    }, 
+    "snapshot-2017-08-04_15-10-01.jpg": {
+        "class": "WET"
     }, 
     "snapshot-2017-08-02_13-30-01.jpg": {
         "class": "DRY"
@@ -140,38 +317,125 @@
     "snapshot-2017-08-01_20-20-01.jpg": {
         "class": "DRY"
     }, 
+    "snapshot-2017-08-05_08-30-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-05_12-20-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-04_14-40-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-05_12-40-01.jpg": {
+        "class": "WET"
+    }, 
     "snapshot-2017-08-02_13-20-01.jpg": {
         "class": "DRY"
+    }, 
+    "snapshot-2017-08-04_16-00-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-05_11-20-01.jpg": {
+        "class": "WET"
     }, 
     "snapshot-2017-08-02_15-20-02.jpg": {
         "class": "DRY"
     }, 
+    "snapshot-2017-08-05_00-10-01.jpg": {
+        "class": "NIGHT"
+    }, 
+    "snapshot-2017-08-04_18-00-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-05_10-00-01.jpg": {
+        "class": "WET"
+    }, 
     "snapshot-2017-08-01_21-10-01.jpg": {
         "class": "DRY"
     }, 
-    "snapshot-2017-08-01_23-10-01.jpg": {
+    "snapshot-2017-08-04_10-50-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-04_23-50-01.jpg": {
+        "class": "NIGHT"
+    }, 
+    "snapshot-2017-08-05_03-10-01.jpg": {
+        "class": "NIGHT"
+    }, 
+    "snapshot-2017-08-04_23-30-01.jpg": {
         "class": "NIGHT"
     }, 
     "snapshot-2017-08-02_17-50-01.jpg": {
         "class": "WET"
     }, 
+    "snapshot-2017-08-05_09-40-01.jpg": {
+        "class": "WET"
+    }, 
     "snapshot-2017-08-02_04-30-01.jpg": {
         "class": "NIGHT"
+    }, 
+    "snapshot-2017-08-04_20-00-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-02_01-10-01.jpg": {
+        "class": "NIGHT"
+    }, 
+    "snapshot-2017-08-04_20-10-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-04_18-40-01.jpg": {
+        "class": "WET"
     }, 
     "snapshot-2017-08-01_21-00-01.jpg": {
         "class": "DRY"
     }, 
-    "snapshot-2017-08-02_16-50-01.jpg": {
-        "class": "DRY"
+    "snapshot-2017-08-05_02-30-01.jpg": {
+        "class": "NIGHT"
+    }, 
+    "snapshot-2017-08-05_00-00-01.jpg": {
+        "class": "NIGHT"
+    }, 
+    "snapshot-2017-08-05_16-20-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-04_08-50-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-05_02-20-01.jpg": {
+        "class": "NIGHT"
+    }, 
+    "snapshot-2017-08-05_08-20-01.jpg": {
+        "class": "WET"
     }, 
     "snapshot-2017-08-02_17-40-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-04_19-20-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-04_15-30-01.jpg": {
         "class": "WET"
     }, 
     "snapshot-2017-08-02_04-00-01.jpg": {
         "class": "NIGHT"
     }, 
+    "snapshot-2017-08-04_11-30-01.jpg": {
+        "class": "WET"
+    }, 
     "snapshot-2017-08-02_04-10-01.jpg": {
         "class": "NIGHT"
+    }, 
+    "snapshot-2017-08-04_16-10-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-01_22-00-01.jpg": {
+        "class": "NIGHT"
+    }, 
+    "snapshot-2017-08-05_13-10-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-05_11-10-01.jpg": {
+        "class": "WET"
     }, 
     "snapshot-2017-08-02_14-20-01.jpg": {
         "class": "DRY"
@@ -179,20 +443,71 @@
     "snapshot-2017-08-01_21-40-01.jpg": {
         "class": "DRY"
     }, 
-    "snapshot-2017-08-02_06-00-01.jpg": {
-        "class": "DRY"
+    "snapshot-2017-08-05_08-40-01.jpg": {
+        "class": "WET"
     }, 
-    "snapshot-2017-08-02_17-20-01.jpg": {
-        "class": "DRY"
+    "snapshot-2017-08-05_11-40-01.jpg": {
+        "class": "WET"
     }, 
-    "snapshot-2017-08-02_16-10-01.jpg": {
-        "class": "DRY"
+    "snapshot-2017-08-05_01-00-01.jpg": {
+        "class": "NIGHT"
+    }, 
+    "snapshot-2017-08-02_03-30-01.jpg": {
+        "class": "NIGHT"
+    }, 
+    "snapshot-2017-08-04_10-00-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-04_11-00-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-04_22-40-01.jpg": {
+        "class": "NIGHT"
+    }, 
+    "snapshot-2017-08-05_09-30-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-05_06-10-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-04_11-10-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-05_06-50-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-05_05-20-01.jpg": {
+        "class": "NIGHT"
+    }, 
+    "snapshot-2017-08-05_12-00-02.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-04_18-20-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-05_11-30-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-04_09-50-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-04_14-50-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-04_16-30-01.jpg": {
+        "class": "WET"
     }, 
     "snapshot-2017-08-01_19-50-01.jpg": {
         "class": "DRY"
     }, 
+    "snapshot-2017-08-05_14-50-01.jpg": {
+        "class": "WET"
+    }, 
     "snapshot-2017-08-02_00-40-01.jpg": {
         "class": "NIGHT"
+    }, 
+    "snapshot-2017-08-05_08-00-01.jpg": {
+        "class": "WET"
     }, 
     "snapshot-2017-08-02_15-10-01.jpg": {
         "class": "DRY"
@@ -200,14 +515,41 @@
     "snapshot-2017-08-01_19-30-01.jpg": {
         "class": "DRY"
     }, 
+    "snapshot-2017-08-04_15-50-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-05_09-20-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-04_17-00-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-05_09-00-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-04_22-30-01.jpg": {
+        "class": "NIGHT"
+    }, 
+    "snapshot-2017-08-04_11-50-01.jpg": {
+        "class": "WET"
+    }, 
     "snapshot-2017-08-01_20-10-01.jpg": {
         "class": "DRY"
     }, 
-    "snapshot-2017-08-02_01-00-01.jpg": {
+    "snapshot-2017-08-05_03-50-01.jpg": {
         "class": "NIGHT"
+    }, 
+    "snapshot-2017-08-05_10-20-01.jpg": {
+        "class": "WET"
     }, 
     "snapshot-2017-08-01_23-30-01.jpg": {
         "class": "NIGHT"
+    }, 
+    "snapshot-2017-08-04_15-40-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-05_10-30-01.jpg": {
+        "class": "WET"
     }, 
     "snapshot-2017-08-02_00-20-01.jpg": {
         "class": "NIGHT"
@@ -215,11 +557,62 @@
     "snapshot-2017-08-02_17-00-01.jpg": {
         "class": "DRY"
     }, 
+    "snapshot-2017-08-04_19-30-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-05_01-50-01.jpg": {
+        "class": "NIGHT"
+    }, 
+    "snapshot-2017-08-04_21-50-01.jpg": {
+        "class": "NIGHT"
+    }, 
+    "snapshot-2017-08-04_22-50-01.jpg": {
+        "class": "NIGHT"
+    }, 
+    "snapshot-2017-08-05_15-50-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-04_10-30-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-04_18-30-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-05_15-30-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-05_03-40-01.jpg": {
+        "class": "NIGHT"
+    }, 
+    "snapshot-2017-08-05_15-00-01.jpg": {
+        "class": "WET"
+    }, 
     "snapshot-2017-08-01_21-20-01.jpg": {
         "class": "DRY"
     }, 
-    "snapshot-2017-08-02_01-30-01.jpg": {
-        "class": "NIGHT"
+    "snapshot-2017-08-04_10-40-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-02_14-40-01.jpg": {
+        "class": "DRY"
+    }, 
+    "snapshot-2017-08-01_21-30-01.jpg": {
+        "class": "DRY"
+    }, 
+    "snapshot-2017-08-04_09-40-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-02_06-00-01.jpg": {
+        "class": "DRY"
+    }, 
+    "snapshot-2017-08-04_15-20-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-02_16-10-01.jpg": {
+        "class": "DRY"
+    }, 
+    "snapshot-2017-08-04_19-50-01.jpg": {
+        "class": "WET"
     }, 
     "snapshot-2017-08-02_14-00-01.jpg": {
         "class": "DRY"
@@ -227,20 +620,50 @@
     "snapshot-2017-08-01_20-50-01.jpg": {
         "class": "DRY"
     }, 
+    "snapshot-2017-08-04_18-50-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-05_15-40-01.jpg": {
+        "class": "WET"
+    }, 
     "snapshot-2017-08-01_20-30-01.jpg": {
         "class": "DRY"
+    }, 
+    "snapshot-2017-08-04_09-10-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-04_19-40-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-05_03-00-01.jpg": {
+        "class": "NIGHT"
+    }, 
+    "snapshot-2017-08-05_10-50-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-04_09-20-01.jpg": {
+        "class": "WET"
     }, 
     "snapshot-2017-08-02_02-00-01.jpg": {
         "class": "NIGHT"
     }, 
-    "snapshot-2017-08-02_01-40-01.jpg": {
+    "snapshot-2017-08-02_17-20-01.jpg": {
+        "class": "DRY"
+    }, 
+    "snapshot-2017-08-01_23-10-01.jpg": {
         "class": "NIGHT"
     }, 
-    "snapshot-2017-08-01_23-40-01.jpg": {
-        "class": "NIGHT"
+    "snapshot-2017-08-04_17-10-01.jpg": {
+        "class": "WET"
     }, 
     "snapshot-2017-08-02_00-00-01.jpg": {
         "class": "NIGHT"
+    }, 
+    "snapshot-2017-08-04_12-00-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-04_11-20-01.jpg": {
+        "class": "WET"
     }, 
     "snapshot-2017-08-02_15-50-01.jpg": {
         "class": "DRY"
@@ -248,17 +671,50 @@
     "snapshot-2017-08-01_23-00-01.jpg": {
         "class": "NIGHT"
     }, 
+    "snapshot-2017-08-05_12-50-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-02_01-30-01.jpg": {
+        "class": "NIGHT"
+    }, 
+    "snapshot-2017-08-05_00-50-01.jpg": {
+        "class": "NIGHT"
+    }, 
     "snapshot-2017-08-02_04-50-01.jpg": {
         "class": "NIGHT"
+    }, 
+    "snapshot-2017-08-05_15-10-01.jpg": {
+        "class": "WET"
     }, 
     "snapshot-2017-08-01_20-40-01.jpg": {
         "class": "DRY"
     }, 
-    "snapshot-2017-08-01_22-00-01.jpg": {
+    "snapshot-2017-08-05_07-10-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-05_10-40-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-05_07-40-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-04_08-20-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-02_01-00-01.jpg": {
         "class": "NIGHT"
     }, 
-    "snapshot-2017-08-01_21-30-01.jpg": {
-        "class": "DRY"
+    "snapshot-2017-08-04_23-40-01.jpg": {
+        "class": "NIGHT"
+    }, 
+    "snapshot-2017-08-04_15-00-01.jpg": {
+        "class": "WET"
+    }, 
+    "snapshot-2017-08-04_23-20-01.jpg": {
+        "class": "NIGHT"
+    }, 
+    "snapshot-2017-08-02_01-40-01.jpg": {
+        "class": "NIGHT"
     }, 
     "snapshot-2017-08-02_13-10-01.jpg": {
         "class": "DRY"

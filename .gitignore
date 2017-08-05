@@ -1,4 +1,3 @@
 .venv
-snapshot*
 *.pyc
 *.egg*

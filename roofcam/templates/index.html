@@ -1,20 +1,23 @@
 <html>
 
 <body>
-<p>Predicted class = <span id="predictedClass">{{ prediction }}</span></p>
-<p>Target class = <span id="targetClass">{{ target }}</span></p>
+<div>
+    <h1>{{ snapshot }}</h1>
+    <div>Predicted class = <span id="predictedClass">{{ prediction }}</span></div>
+    <div>Target class = <span id="targetClass">{{ target }}</span></div>
+</div>
 <img id="snapshot" src="snapshot/{{ snapshot }}" style="width:100%; max-width:640px"/>
 
 <div>
     <a id="prevImg" href="#">PREV</a>
-    <a id="nextImg" href="/next/{{ snapshot }}">NEXT</a>
+    <a id="nextImg" href="#">NEXT</a>
 </div>
 
 <script>
     const $ = document.querySelector.bind(document);
     const snapshotEl = $("#snapshot");
-    const prevImg = $("#prevImg");
-    const nextImg = $("#nextImg");
+    const prevImgEl = $("#prevImg");
+    const nextImgEl = $("#nextImg");
 
     document.onkeydown = function (evt) {
         evt = evt || window.event;
@@ -64,8 +67,8 @@
         }
     };
 
-    prevImg.onclick = prevNextHandler("prev");
-    nextImg.onclick = prevNextHandler("next");
+    prevImgEl.onclick = prevNextHandler("prev");
+    nextImgEl.onclick = prevNextHandler("next");
 </script>
 </body>
 
