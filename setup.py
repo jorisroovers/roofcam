@@ -39,7 +39,9 @@ setup(
     packages=find_packages(),
     entry_points={
         "console_scripts": [
-            "roofcam = roofcam.cli:cli",
+            "roofcam = roofcam.cli.web:cli",
+            "roofcam-web = roofcam.cli.web:cli",
+            "roofcam-tools = roofcam.cli.tools:cli"
         ],
     },
 )

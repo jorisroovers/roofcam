@@ -6,8 +6,6 @@ import click
 app = Flask(__name__)
 
 
-# Store the target PATH in a global var, not ideal but being pragmatic here :)
-
 @click.command()
 @click.option('-p', '--port', default=1234, help="Port on which to run web.py [default: 1234]")
 @click.option('-h', '--host', default="0.0.0.0", help="Host on which to run web.py [default: 0.0.0.0]")
