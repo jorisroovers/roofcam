@@ -28,7 +28,7 @@ Then:
 python setup.py develop
 
 # Classify a single snapshot
-roofcam --file samples/`ls *snapshots* | sort | tail -1`
+roofcam --file `ls samples/snapshot* | sort | tail -1`
 
 # Classify a directory of snapshots
 roofcam --dir samples

@@ -41,7 +41,8 @@ setup(
         "console_scripts": [
             "roofcam = roofcam.cli.web:cli",
             "roofcam-web = roofcam.cli.web:cli",
-            "roofcam-tools = roofcam.cli.tools:cli"
+            "roofcam-tools = roofcam.cli.tools:cli",
+            "roofcam-ml = roofcam.cli.ml:cli",
         ],
     },
 )

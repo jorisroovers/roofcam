@@ -1,0 +1,36 @@
+<html>
+<head>
+    <link rel="stylesheet" href="static/css/styles.css"/>
+</head>
+
+<body>
+<div>
+    <h1 id="snapshot-name">{{ snapshot }}</h1>
+    <div>Predicted class = <span id="predictedClass">{{ prediction }}</span></div>
+    <div>Target class = <span id="targetClass">{{ target }}</span></div>
+</div>
+<div style="width:100%; max-width:640px">
+    <img id="snapshot" src="snapshot/{{ snapshot }}"/>
+
+    {% for date, snapshots in available_snapshot_dates.iteritems() %}
+        <a class="snapshot-date" href="#" data-snapshot="{{ snapshots[0] }}">{{ date }}</a>
+    {% endfor %}
+
+    <div>
+        <div style="text-align: center">
+            <span id="key-left" class="key"><img src="static/img/left.png"/><a id="prevImg" href="#">PREV</a></span>
+            <span id="key-right" class="key"><a id="nextImg" href="#">NEXT</a><img src="static/img/right.png"/></span>
+        </div>
+        <div>
+            Classify
+            <div class="key"><a href="#" id="key-w"><img src="static/img/w.png"/> Wet</a></div>
+            <div class="key"><a href="#" id="key-d"><img src="static/img/d.png"/> Dry</a></div>
+            <div class="key"><a href="#" id="key-n"><img src="static/img/n.png"/> Night</a></div>
+        </div>
+    </div>
+</div>
+
+<script src="static/js/app.js"></script>
+</body>
+
+</html>

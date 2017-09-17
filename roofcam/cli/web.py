@@ -3,7 +3,14 @@ from roofcam import classifier
 from flask import Flask, render_template, send_from_directory, request, jsonify
 import click
 
-app = Flask(__name__)
+from collections import OrderedDict
+
+TARGET_STORE_FILE = "target.json"
+
+web_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "../web")
+template_dir = os.path.join(web_dir, "templates")
+static_dir = os.path.join(web_dir, "static")
+app = Flask(__name__, template_folder=template_dir, static_folder=static_dir)
 
 
 @click.command()
@@ -16,13 +23,12 @@ app = Flask(__name__)
 @click.option('-d', '--dir', help="Classify a directory of files",
               type=click.Path(exists=True, resolve_path=True, file_okay=False, readable=True))
 def cli(port, host, web, debug, file, dir):
-    #
     if web:
         if file:
             app.config['PATH'] = file
         elif dir:
             app.config['PATH'] = dir
-            app.config['TARGET_CLASS_STORE'] = os.path.join(dir, "target.json")
+            app.config['TARGET_CLASS_STORE'] = os.path.join(dir, TARGET_STORE_FILE)
         app.run(host=host, port=port, debug=debug)
     else:
         # We're not running a webserver, so just do the classification for the passed file or all files in the
@@ -67,12 +73,28 @@ def snapshot_data(snapshot, target=None):
     return jsonify({'snapshot': snapshot, 'prediction': prediction, 'target': target})
 
 
+def available_snapshot_dates():
+    snapshot_grouping = OrderedDict()
+    for image in image_list():
+        date = image.replace("snapshot-", "").split("_")[0]
+        date_snapshot_list = snapshot_grouping.get(date, [])
+        date_snapshot_list.append(image)
+        snapshot_grouping[date] = date_snapshot_list
+
+    return snapshot_grouping
+
+
 @app.route('/snapshot/<snapshot>')
 def snapshot(snapshot):
     dirname = app.config['PATH']
     if not os.path.isdir(app.config['PATH']):
         dirname = os.path.dirname(app.config['PATH'])
     return send_from_directory(dirname, snapshot)
+
+
+@app.route('/snapshotdata/<snapshot>')
+def snapshotdata(snapshot):
+    return snapshot_data(snapshot)
 
 
 @app.route('/prev/<snapshot>')
@@ -117,7 +139,9 @@ def index():
         target = get_target(snapshot)
 
     prediction = classifier.classify_wet_or_dry(file)
-    return render_template("index.html", snapshot=os.path.basename(file), prediction=prediction, target=target)
+
+    return render_template("index.html", snapshot=os.path.basename(file), prediction=prediction,
+                           available_snapshot_dates=available_snapshot_dates(), target=target)
 
 
 if __name__ == "__main__":
