@@ -50,7 +50,7 @@ def snapshot_data(snapshot, target=None):
 
     if target is None:
         target = get_target(snapshot)
-    return jsonify({'snapshot': snapshot, 'prediction': prediction, 'target': target})
+    return {'snapshot': snapshot, 'prediction': prediction, 'target': target}
 
 
 def available_snapshot_dates():
@@ -71,15 +71,14 @@ def snapshot(snapshot):
         dirname = os.path.dirname(app.config['PATH'])
 
     if snapshot.lower() == "latest":
-        snapshots = fnmatch.filter(os.listdir(dirname), "*snapshot*")
-        snapshot = snapshots[-1]
+        snapshot = image_list()[-1]
 
     return send_from_directory(dirname, snapshot)
 
 
 @app.route('/snapshotdata/<snapshot>')
 def snapshotdata(snapshot):
-    return snapshot_data(snapshot)
+    return jsonify(snapshot_data(snapshot))
 
 
 @app.route('/prev/<snapshot>')
@@ -87,7 +86,7 @@ def prev_snapshot(snapshot):
     files = image_list()
     prev_index = max(files.index(snapshot) - 1, 0)
     file = files[prev_index]
-    return snapshot_data(file)
+    return jsonify(snapshot_data(file))
 
 
 @app.route('/next/<snapshot>')
@@ -95,7 +94,7 @@ def next_snapshot(snapshot):
     files = image_list()
     next_index = min(files.index(snapshot) + 1, max(len(files) - 1, 0))
     file = files[next_index]
-    return snapshot_data(file)
+    return jsonify(snapshot_data(file))
 
 
 @app.route('/classify/<snapshot>', methods=['POST'])
@@ -110,23 +109,13 @@ def classify(snapshot):
     with open(app.config['TARGET_CLASS_STORE'], 'w') as outfile:
         json.dump(data, outfile, indent=4)
 
-    return snapshot_data(snapshot, target=request.form['class'])
+    return jsonify(snapshot_data(snapshot, target=request.form['class']))
 
 
 @app.route("/")
 def index():
-    path = app.config.get('PATH')
-    file = path
-    target = "UNKNOWN"
-    if os.path.isdir(path):
-        snapshot = image_list()[-1]
-        file = os.path.join(path, snapshot)
-        target = get_target(snapshot)
-
-    prediction = classifier.classify_wet_or_dry(file)
-
-    return render_template("index.html", snapshot=os.path.basename(file), prediction=prediction,
-                           available_snapshot_dates=available_snapshot_dates(), target=target)
+    prediction = snapshot_data(image_list()[-1])
+    return render_template("index.html", available_snapshot_dates=available_snapshot_dates(), **prediction)
 
 
 if __name__ == "__main__":

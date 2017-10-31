@@ -20,6 +20,8 @@ def cli():
               type=click.Path(exists=True, resolve_path=True, file_okay=True, readable=True))
 def classify(debug, path):
 
+    classifier.set_debug(debug)
+
     if os.path.isfile(path):
         files = [path]
     else:

@@ -1,4 +1,22 @@
+import logging
 from PIL import Image, ImageStat, ImageOps, ImageEnhance
+
+
+LOG = logging.getLogger("roofcam.simpleclassifier")
+LOG_FORMAT = '%(levelname)s: %(message)s'
+
+handler = logging.StreamHandler()
+formatter = logging.Formatter(LOG_FORMAT)
+handler.setFormatter(formatter)
+LOG.addHandler(handler)
+LOG.setLevel(logging.ERROR)
+
+
+def set_debug(debug):
+    if debug:
+        LOG.setLevel(logging.DEBUG)
+    else:
+        LOG.setLevel(logging.ERROR)
 
 
 def brightness(im_file):
@@ -9,6 +27,7 @@ def brightness(im_file):
 
 def is_day(image):
     bright = brightness(image)
+    LOG.debug("brightness: %s", bright)
     return bright > 100
 
 
