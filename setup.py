@@ -33,10 +33,10 @@ setup(
     author='Joris Roovers',
     url='https://github.com/jorisroovers/roofcam',
     license='MIT',
-    package_data={
-        'roofcam': ['files/*']
-    },
     packages=find_packages(),
+    package_data={
+        'roofcam.web': ['templates/*', 'static/css/*', 'static/img/*', 'static/js/*'],
+    },
     entry_points={
         "console_scripts": [
             "roofcam = roofcam.cli.web:cli",

@@ -1,7 +1,8 @@
 .key img {
     width: 45px;
+    vertical-align: middle;
 }
 
-.key {
-    vertical-align: middle;
+.key a {
+    text-decoration: none;
 }
