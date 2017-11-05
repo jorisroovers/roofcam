@@ -37,31 +37,34 @@ def get_water_region(image):
 
 
 def classify_wet_or_dry(file):
-    im = Image.open(file)
-    region = get_water_region(im)
-    if not is_day(region):
-        return "NIGHT"
-    # region.show()
-    region = ImageOps.invert(region)
-    region = ImageEnhance.Contrast(region).enhance(2)
-    region = region.convert('L')
-    region = region.point(lambda x: 0 if x < 175 else 255, '1')
+    try:
+        im = Image.open(file)
+        region = get_water_region(im)
+        if not is_day(region):
+            return "NIGHT"
+        # region.show()
+        region = ImageOps.invert(region)
+        region = ImageEnhance.Contrast(region).enhance(2)
+        region = region.convert('L')
+        region = region.point(lambda x: 0 if x < 175 else 255, '1')
 
-    black = 0
-    white = 0
-    for pixel in region.getdata():
-        if pixel == 0:
-            black += 1
-        else:
-            white += 1
-    # image = image.convert('1')
-    # region.show()
-    result = "WATER" if white > 850 else "DRY"
+        black = 0
+        white = 0
+        for pixel in region.getdata():
+            if pixel == 0:
+                black += 1
+            else:
+                white += 1
+        # image = image.convert('1')
+        # region.show()
+        result = "WET" if white > 850 else "DRY"
 
-    # print file, "->", "black=", black, "white=", white, "==>", result
-    im.close()
+        # print file, "->", "black=", black, "white=", white, "==>", result
+        im.close()
 
-    return result
+        return result
+    except IOError:
+        return "ERROR"
     # print file, "->", brightness(region)
     # print file, "->", brightness2(region)
     # print file, "->", brightness3(region)

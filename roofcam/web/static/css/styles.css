@@ -6,3 +6,7 @@
 .key a {
     text-decoration: none;
 }
+
+#snapshot {
+    height: 480px;
+}
