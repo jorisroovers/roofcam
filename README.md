@@ -3,7 +3,7 @@ Detecting water on my roof using a hi3510/rtt-3300 camera.
 
 For now this is just some random code, but over time it will hopefully become something coherent :)
 
-The goal is to have a cronjob that periodically takes snapshots using the camera pointed at my flat roof. 
+The goal is to have a cronjob that periodically takes snapshots using the camera pointed at my flat roof.
 Roofcam will then detect whether the latest snapshot contains any water and then serve that snapshot and its
 classification (water/no water) in a simple html page that can be included in a
 [homeassistant](http://homeassistant.io/) dashboard.
@@ -17,22 +17,29 @@ experiment with different classifiers and compare their accuracy.
 Roofcam requires [Pillow](http://pillow.readthedocs.io/en/4.0.x/index.html). Since Pillow has binary dependencies, it's
 easiest to install it as a system package:
 
-On Ubuntu:
-```
-sudo apt-get install python-imaging
-```
+```bash
+# Build container image
+docker build -t roofcam .
 
-Then:
-```
+# Run container
+docker run -v $(pwd):/roofcam -p 1234:1234 -it roofcam bash
+
 # setup.py develop needed to use Flask debug mode:
 python setup.py develop
 
 # Classify a single snapshot
-roofcam --file `ls samples/snapshot* | sort | tail -1`
+roofcam-ml classify --debug -p `ls samples/snapshot* | sort | tail -1`
 
 # Classify a directory of snapshots
-roofcam --dir samples
+roofcam-ml classify --debug -p samples
 
 # host a webserver with the latest snapshot
-roofcam --dir samples --web --port 1234 --host localhost
+roofcam --debug --dir samples --port 1234 --host 0.0.0.0
+```
+
+### Convenience commands
+
+```bash
+# Remove docker image
+docker rmi -f roofcam
 ```

@@ -78,6 +78,8 @@ def snapshot(snapshot):
 
 @app.route('/snapshotdata/<snapshot>')
 def snapshotdata(snapshot):
+    if snapshot.lower() == "latest":
+        snapshot = image_list()[-1]
     return jsonify(snapshot_data(snapshot))
 
 

@@ -28,7 +28,7 @@ setup(
     install_requires=[
         "Flask == 0.12.1",
         "click == 6.7",
-        "Pillow==4.0.0"
+        "Pillow>=4.0.0"
     ],
     author='Joris Roovers',
     url='https://github.com/jorisroovers/roofcam',
